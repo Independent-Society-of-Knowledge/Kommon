@@ -16,14 +16,15 @@ data class Matrix(
         assert(this isOfSize other.dimension ){
             Throwable("Two matrices of different dimension can't be summed.")
         }
-        
-
     }
 
-    infix fun isOfSize(other: Pair<Int, Int>): Boolean =
+    private infix fun isOfSize(other: Pair<Int, Int>): Boolean =
         if (elements.size == other.first)
             elements.first().size == other.second
         else
             false
 
+    fun zip(other: Matrix){
+
+    }
 }
